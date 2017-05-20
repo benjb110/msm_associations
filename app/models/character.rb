@@ -7,8 +7,8 @@ class Character < ApplicationRecord
   validates :actor_id, :presence => true
 
 
-belongs_to(:actor, :class_name => "Actor")
-belongs_to(:movie, :class_name => "Movie") 
+belongs_to :actor
+belongs_to :movie
 
 
 

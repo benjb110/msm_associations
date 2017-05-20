@@ -14,6 +14,7 @@ class CharactersController < ApplicationController
   def new
     @character = Character.new
 @movie = Movie.new
+@actor = Actor.new
     render("characters/new.html.erb")
   end
 
@@ -35,6 +36,8 @@ class CharactersController < ApplicationController
 
   def edit
     @character = Character.find(params[:id])
+    @movie = Movie.new
+    @actor = Actor.new
 
     render("characters/edit.html.erb")
   end
