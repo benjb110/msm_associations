@@ -19,10 +19,18 @@
 
     </dl>
 
+<li>
     <% @actor.movies.each do |movie|%>
    <%= movie.title %>
-
    <% end  %>
+ </li>
+
+<li>
+   <% @actor.characters.each do |character|%>
+  (<%= character.name   %>)
+
+  <% end  %>
+
 
 
 
@@ -60,10 +68,10 @@
       </div>
 
       <!-- Label and input for actor_id -->
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="actor_id" class="control-label">
           Actor
-        </label>
+        </label> -->
 
         <input type="hidden" id="actor_id" name="actor_id" placeholder="Actor" class="form-control" value="<%= @actor.id %>">
       </div>
