@@ -49,7 +49,7 @@
 
 <ul>
   <% @movie.characters.each do |character|%>
-  <li> <%= character.actor %>
+  <li> <%= character.actor.name %>
     (<%= character.name %>)
   </li>
   <% end %>
@@ -72,12 +72,12 @@
 
 
 <div>
-    <label for="actor_id" class="control-label">
+    <label for="actor_name" class="control-label">
       Actor
 
     </label>
-    
-    <input type="text" id="actor_id" name="actor_id" placeholder="Actor" class="form-control">
+
+    <%= select_tag(:actor_id, options_from_collection_for_select(Actor.all, :id, :name), :class => "form-control") %>
   </div>
 
   <!-- Label and input for name -->

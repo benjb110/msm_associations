@@ -9,8 +9,9 @@ class Character < ApplicationRecord
 
 
 
-belongs_to(:actor, :class_name => "Actor", :foreign_key => "character_id")
-belongs_to(:movie, :class_name => "Movie", :foreign_key => "movie_id")
+
+belongs_to(:movie, :class_name => "Movie")
+belongs_to(:actor, :class_name => "Actor")
 
 
 
